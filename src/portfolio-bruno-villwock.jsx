@@ -461,11 +461,13 @@ const CASES = [
       "Refinar a lógica de recomendação com dados reais de uso",
     ],
     media: [
-      { type: "image", src: "/images/sommelier/desk-research.png",  alt: "Desk research do Sommelier Digital" },
-      { type: "image", src: "/images/sommelier/moscow.png",          alt: "Matriz MoSCoW do Sommelier Digital" },
-      { type: "image", src: "/images/sommelier/fluxo-usuario.png",   alt: "Fluxo de usuário do Sommelier Digital" },
-      { type: "image", src: "/images/sommelier/telas-figma.png",     alt: "Telas do protótipo no Figma" },
-      { type: "video", src: "/videos/sommelier/prototipo.mp4",       alt: "Demonstração do protótipo Sommelier Digital" },
+      { type: "image", src: "/sommelier/totem-mercado-01.jpg",    alt: "Totem do Sommelier Digital instalado na adega do mercado",          caption: "Totem instalado na adega — contexto real de uso no ponto de venda." },
+      { type: "image", src: "/sommelier/desk-research.jpg",       alt: "Desk research sobre comportamento de consumo de vinhos",             caption: "Desk research: dados sobre preferências, ocasiões e comportamento de compra." },
+      { type: "image", src: "/sommelier/moscow.jpg",              alt: "Matriz MoSCoW de priorização de funcionalidades do MVP",            caption: "Matriz MoSCoW usada para priorizar as funcionalidades essenciais do MVP." },
+      { type: "image", src: "/sommelier/fluxo-usuario.jpg",       alt: "Fluxo de usuário com as 4 perguntas guiadas até a recomendação",    caption: "Fluxo de usuário: 4 perguntas guiadas da ocasião até a recomendação final." },
+      { type: "image", src: "/sommelier/rascunhos-prototipo.png", alt: "Rascunhos e exploração de telas no Figma",                         caption: "Exploração e rascunhos no Figma — diferentes direções antes do protótipo final." },
+      { type: "image", src: "/sommelier/totem-mercado-02.jpg",    alt: "Totem do Sommelier Digital visto pelo ângulo lateral na gôndola",   caption: "Totem em operação — integrado ao ambiente da adega no ponto de venda." },
+      { type: "video", src: "/sommelier/prototipo.mp4",           alt: "Demonstração do protótipo interativo do Sommelier Digital",         caption: "Demonstração da jornada completa no protótipo interativo." },
     ],
   },
 
@@ -1744,7 +1746,7 @@ function Home({ onSelectCase, onNavClick }) {
             <span style={{ width: 8, height: 8, borderRadius: "50%", background: T.orange, display: "block", position: "relative", flexShrink: 0 }}>
               <span style={{ position: "absolute", inset: -2, borderRadius: "50%", border: `1px solid ${T.orange}`, animation: "pulse-ring 2s ease-out infinite" }} />
             </span>
-            <span style={{ fontSize: 13, color: "rgba(255,255,255,.7)", fontWeight: 500 }}>Seja bem-vindo!</span>
+            <span style={{ fontSize: 13, color: "rgba(255,255,255,.7)", fontWeight: 500 }}>Disponível para novas oportunidades</span>
           </div>
 
           {/* Nome */}
