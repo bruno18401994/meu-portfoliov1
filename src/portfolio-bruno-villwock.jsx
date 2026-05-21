@@ -469,60 +469,6 @@ const CASES = [
     ],
   },
 
-  // ── FLUXOS FINALIZADOS ─────────────────────────────────────────
-  {
-    id:       "fluxos",
-    template: "generic",
-    tag:      "Pesquisa qualitativa",
-    tagColor: T.purple,
-    title:    "Fluxos Finalizados",
-    company:  "Selbetti — Smartshare",
-    icon:     "🔍",
-    shortContext: "Pesquisa sobre como usuários consultam registros de fluxos encerrados em cenários de alto volume de dados.",
-    challenge:    "Entender como usuários buscam registros antigos, quais filtros utilizam e como reduzir atritos em consultas com alto volume de informações.",
-    deliverables: [
-      "Roteiro de entrevista",
-      "Síntese de descobertas",
-      "Recomendações de UX",
-      "Propostas de empty states",
-    ],
-
-    // ── Página de detalhe ─────────────────────────────────────
-    heroTitle:    "Pesquisa: Fluxos Finalizados no Smartshare",
-    heroSubtitle: "Investigação qualitativa para entender como usuários consultam registros encerrados e como reduzir atritos em cenários de alto volume.",
-    heroSummary:  "Investigação sobre o uso da listagem de fluxos finalizados no Smartshare, especialmente em cenários com grande volume de dados e problemas de performance.",
-    tags: ["Pesquisa qualitativa","UX Research","B2B","Entrevistas","Sistemas complexos"],
-    overview: [
-      { label: "Problema",      text: "Usuários relatavam lentidão e confusão ao localizar fluxos encerrados há mais de 30 dias, com mensagens de erro genéricas que não orientavam sobre o que fazer." },
-      { label: "Minha atuação", text: "Planejamento de entrevistas, condução de pesquisa qualitativa, análise de padrões de comportamento, síntese de insights e recomendações de melhoria." },
-      { label: "Contexto",      text: "A funcionalidade era crítica para auditoria e rastreabilidade de processos no produto B2B." },
-      { label: "Resultado",     text: "Documento de síntese com descobertas categorizadas, recomendações priorizadas e propostas visuais entregues ao time de produto." },
-    ],
-    challengeFull:     "Entender como usuários buscam registros antigos, quais filtros utilizam e como reduzir atritos em consultas com alto volume de informações — identificando padrões de uso não documentados.",
-    challengeQuestion: "Como usuários buscam registros encerrados e onde estão os maiores pontos de atrito?",
-    researchInsights: [
-      "A maioria dos usuários usa a listagem para auditoria e comprovação de processos",
-      "Eles precisam de filtros precisos por data e número de protocolo",
-      "Queries sem filtros adequados geravam timeout e erros genéricos",
-      "Padrões de uso não documentados revelaram oportunidades de melhoria em filtros de data",
-    ],
-    learnings: [
-      "Pesquisa com usuários de sistemas internos exige atenção ao contexto real de trabalho",
-      "As dores reais só aparecem quando o usuário está executando a tarefa",
-      "Filtros devem ser projetados como parte da arquitetura da listagem, não como acessório",
-    ],
-    wouldDoDiff: [
-      "Observaria usuários em contexto real de uso antes das entrevistas",
-      "Mapearia os padrões de consulta com dados de uso do sistema",
-    ],
-    nextSteps: [
-      "Implementação das melhorias de filtro priorizadas",
-      "Acompanhamento pós-implementação",
-      "Nova rodada de testes para validar a eficácia das mudanças",
-    ],
-    media: [], // sem mídias neste case por enquanto
-  },
-
   // ── RECORTE E PUBLICAÇÃO DE DOCUMENTOS ───────────────────────
   {
     id:       "recorte",
