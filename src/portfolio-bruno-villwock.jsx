@@ -791,7 +791,7 @@ function MediaItem({ item, large = false }) {
     );
   }
 
-  if (item.type === "youtube") {
+  if (item.type === "youtube")
     const videoId = item.src;
     return (
       <div style={{ position: "relative", width: "100%", paddingBottom: "177.78%", borderRadius: large ? 16 : 12, overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)", background: "#000" }}>
