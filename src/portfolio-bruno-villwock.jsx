@@ -366,12 +366,12 @@ const CASES = [
     // ── Mídias: coloque os caminhos reais após fazer upload ──────
     // type: "image" | "video"
     media: [
-      { type: "image", src: "/images/dashboard/mockup-volume-status.png",      alt: "Dashboard BPM Eficiência — visão geral da aba Volume e Status",              caption: "Visão geral da aba Volume e Status com cards de indicadores operacionais." },
-      { type: "image", src: "/images/dashboard/volume-status.png",             alt: "Aba Volume e Status com cards de fluxos e gráficos por processo",            caption: "Cards de fluxos abertos, no prazo, em risco, atrasados e finalizados." },
-      { type: "image", src: "/images/dashboard/desempenho-operacional.png",    alt: "Aba Desempenho Operacional com SLA, tempo médio e gráfico por processo",     caption: "Desempenho operacional: SLA dos fluxos, tempo médio de conclusão e tempo por processo." },
-      { type: "image", src: "/images/dashboard/carga-gargalos.png",            alt: "Aba Carga e Gargalos com ranking de usuários mais velozes e mais demorados", caption: "Carga e gargalos: ranking de usuários por tempo médio de execução." },
-      { type: "image", src: "/images/dashboard/drill-down-fluxos.png",         alt: "Modal de drill-down exibindo lista de fluxos atrasados ao clicar no card",   caption: "Drill-down ao clicar em um indicador: lista detalhada de fluxos relacionados." },
-      { type: "image", src: "/images/dashboard/loading-skeleton.png",          alt: "Estado de carregamento do dashboard com skeleton dos cards e gráficos",       caption: "Estado de carregamento com skeleton — feedback visual enquanto os dados são buscados." },
+      { type: "image", src: "/dashboard/mockup-volume-status.png",      alt: "Dashboard BPM Eficiência — visão geral da aba Volume e Status",              caption: "Visão geral da aba Volume e Status com cards de indicadores operacionais." },
+      { type: "image", src: "/dashboard/volume-status.png",             alt: "Aba Volume e Status com cards de fluxos e gráficos por processo",            caption: "Cards de fluxos abertos, no prazo, em risco, atrasados e finalizados." },
+      { type: "image", src: "/dashboard/desempenho-operacional.png",    alt: "Aba Desempenho Operacional com SLA, tempo médio e gráfico por processo",     caption: "Desempenho operacional: SLA dos fluxos, tempo médio de conclusão e tempo por processo." },
+      { type: "image", src: "/dashboard/carga-gargalos.png",            alt: "Aba Carga e Gargalos com ranking de usuários mais velozes e mais demorados", caption: "Carga e gargalos: ranking de usuários por tempo médio de execução." },
+      { type: "image", src: "/dashboard/drill-down-fluxos.png",         alt: "Modal de drill-down exibindo lista de fluxos atrasados ao clicar no card",   caption: "Drill-down ao clicar em um indicador: lista detalhada de fluxos relacionados." },
+      { type: "image", src: "/dashboard/loading-skeleton.png",          alt: "Estado de carregamento do dashboard com skeleton dos cards e gráficos",       caption: "Estado de carregamento com skeleton — feedback visual enquanto os dados são buscados." },
     ],
   },
 
@@ -606,15 +606,15 @@ const CASES = [
       "Evoluir a solução com base em dados reais de uso",
     ],
     media: [
-      { type: "image", src: "/images/recorte-smartshare/visao-geral.png",            alt: "Visão geral da funcionalidade de recorte e publicação de documentos no SmartShare", caption: "Visão geral da jornada de recorte e publicação dentro do SmartShare." },
-      { type: "image", src: "/images/recorte-smartshare/tela-recorte.png",            alt: "Tela principal de recorte de páginas do PDF",                                        caption: "Tela principal para visualizar páginas, criar divisões e organizar o documento." },
-      { type: "image", src: "/images/recorte-smartshare/intervalos.png",              alt: "Criação de intervalos de páginas no documento",                                       caption: "Definição visual dos intervalos de corte entre páginas." },
-      { type: "image", src: "/images/recorte-smartshare/painel-lateral.png",          alt: "Painel lateral para classificação dos documentos",                                    caption: "Painel lateral para informar RA, tipo documental, nome do documento e pasta de destino." },
-      { type: "image", src: "/images/recorte-smartshare/rotacionar-paginas.png",      alt: "Jornada de rotação de páginas no PDF",                                               caption: "Fluxo para corrigir páginas digitalizadas na orientação incorreta." },
-      { type: "image", src: "/images/recorte-smartshare/excluir-paginas.png",         alt: "Jornada de exclusão de páginas no PDF",                                              caption: "Comportamento da exclusão de páginas e impacto nos intervalos já definidos." },
-      { type: "image", src: "/images/recorte-smartshare/publicacao-segundo-plano.png",alt: "Publicação de documentos em segundo plano",                                           caption: "Publicação em segundo plano para permitir que o usuário continue usando o sistema." },
-      { type: "image", src: "/images/recorte-smartshare/onboarding.png",              alt: "Onboarding guiado da funcionalidade",                                                caption: "Onboarding criado para orientar o primeiro uso da funcionalidade." },
-      { type: "image", src: "/images/recorte-smartshare/erros-alertas.png",           alt: "Estados de erro e alertas da funcionalidade",                                        caption: "Estados de erro, alertas e feedbacks para evitar publicações incorretas." },
+      { type: "image", src: "/recorte-smartshare/visao-geral.png",            alt: "Visão geral da funcionalidade de recorte e publicação de documentos no SmartShare", caption: "Visão geral da jornada de recorte e publicação dentro do SmartShare." },
+      { type: "image", src: "/recorte-smartshare/tela-recorte.png",            alt: "Tela principal de recorte de páginas do PDF",                                        caption: "Tela principal para visualizar páginas, criar divisões e organizar o documento." },
+      { type: "image", src: "/recorte-smartshare/intervalos.png",              alt: "Criação de intervalos de páginas no documento",                                       caption: "Definição visual dos intervalos de corte entre páginas." },
+      { type: "image", src: "/recorte-smartshare/painel-lateral.png",          alt: "Painel lateral para classificação dos documentos",                                    caption: "Painel lateral para informar RA, tipo documental, nome do documento e pasta de destino." },
+      { type: "image", src: "/recorte-smartshare/rotacionar-paginas.png",      alt: "Jornada de rotação de páginas no PDF",                                               caption: "Fluxo para corrigir páginas digitalizadas na orientação incorreta." },
+      { type: "image", src: "/recorte-smartshare/excluir-paginas.png",         alt: "Jornada de exclusão de páginas no PDF",                                              caption: "Comportamento da exclusão de páginas e impacto nos intervalos já definidos." },
+      { type: "image", src: "/recorte-smartshare/publicacao-segundo-plano.png",alt: "Publicação de documentos em segundo plano",                                           caption: "Publicação em segundo plano para permitir que o usuário continue usando o sistema." },
+      { type: "image", src: "/recorte-smartshare/onboarding.png",              alt: "Onboarding guiado da funcionalidade",                                                caption: "Onboarding criado para orientar o primeiro uso da funcionalidade." },
+      { type: "image", src: "/recorte-smartshare/erros-alertas.png",           alt: "Estados de erro e alertas da funcionalidade",                                        caption: "Estados de erro, alertas e feedbacks para evitar publicações incorretas." },
     ],
   },
 
