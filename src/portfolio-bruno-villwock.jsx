@@ -1744,7 +1744,7 @@ function Home({ onSelectCase, onNavClick }) {
             <span style={{ width: 8, height: 8, borderRadius: "50%", background: T.orange, display: "block", position: "relative", flexShrink: 0 }}>
               <span style={{ position: "absolute", inset: -2, borderRadius: "50%", border: `1px solid ${T.orange}`, animation: "pulse-ring 2s ease-out infinite" }} />
             </span>
-            <span style={{ fontSize: 13, color: "rgba(255,255,255,.7)", fontWeight: 500 }}>Disponível para novas oportunidades</span>
+            <span style={{ fontSize: 13, color: "rgba(255,255,255,.7)", fontWeight: 500 }}>Seja bem-vindo!</span>
           </div>
 
           {/* Nome */}
