@@ -690,19 +690,86 @@ function FadeIn({ children, delay = 0, style = {} }) {
 }
 
 // ─────────────────────────────────────────────────────────────────
-// COMPONENTE — MediaItem (imagem ou vídeo com fallback)
+// COMPONENTE — Lightbox (ampliar imagem ao clicar)
+// ─────────────────────────────────────────────────────────────────
+
+function Lightbox({ src, alt, onClose }) {
+  useEffect(() => {
+    const handleKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [onClose]);
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position:        "fixed",
+        inset:           0,
+        zIndex:          9999,
+        background:      "rgba(0,0,0,0.92)",
+        display:         "flex",
+        alignItems:      "center",
+        justifyContent:  "center",
+        padding:         "2rem",
+        cursor:          "zoom-out",
+      }}
+    >
+      <button
+        onClick={onClose}
+        style={{
+          position:   "absolute",
+          top:        "1.25rem",
+          right:      "1.5rem",
+          background: "rgba(255,255,255,0.1)",
+          border:     "1px solid rgba(255,255,255,0.2)",
+          borderRadius: "50%",
+          width:      36,
+          height:     36,
+          color:      "#fff",
+          fontSize:   18,
+          cursor:     "pointer",
+          display:    "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          lineHeight: 1,
+        }}
+        aria-label="Fechar"
+      >
+        ✕
+      </button>
+      <img
+        src={src}
+        alt={alt}
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          maxWidth:     "100%",
+          maxHeight:    "90vh",
+          objectFit:    "contain",
+          borderRadius: 12,
+          cursor:       "default",
+          boxShadow:    "0 8px 60px rgba(0,0,0,0.6)",
+        }}
+      />
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────
+// COMPONENTE — MediaItem (imagem ou vídeo com fallback + lightbox)
 // ─────────────────────────────────────────────────────────────────
 
 function MediaItem({ item, large = false }) {
-  const [err, setErr] = useState(false);
+  const [err,       setErr]       = useState(false);
+  const [lightbox,  setLightbox]  = useState(false);
 
   const baseStyle = {
-    width:      "100%",
+    width:        "100%",
     borderRadius: large ? 16 : 12,
-    border:     "1px solid rgba(255,255,255,0.1)",
-    objectFit:  "cover",
-    maxHeight:  large ? 520 : 400,
-    background: "rgba(255,255,255,0.03)",
+    border:       "1px solid rgba(255,255,255,0.1)",
+    objectFit:    "contain",        // mostra a imagem inteira, sem cortar
+    background:   "rgba(255,255,255,0.03)",
+    display:      "block",
   };
 
   const placeholderStyle = {
@@ -730,19 +797,24 @@ function MediaItem({ item, large = false }) {
         src={item.src}
         controls
         aria-label={item.alt}
-        style={{ ...baseStyle, background: "#000", display: "block" }}
+        style={{ ...baseStyle, background: "#000" }}
         onError={() => setErr(true)}
       />
     );
   }
 
   return (
-    <img
-      src={item.src}
-      alt={item.alt}
-      style={baseStyle}
-      onError={() => setErr(true)}
-    />
+    <>
+      {lightbox && <Lightbox src={item.src} alt={item.alt} onClose={() => setLightbox(false)} />}
+      <img
+        src={item.src}
+        alt={item.alt}
+        style={{ ...baseStyle, cursor: "zoom-in" }}
+        onClick={() => setLightbox(true)}
+        onError={() => setErr(true)}
+        title="Clique para ampliar"
+      />
+    </>
   );
 }
 
