@@ -1345,6 +1345,25 @@ function CaseDetailSommelier({ c, onBack }) {
 
         {c.media[4] && <FadeIn delay={0.1}><div style={{ marginBottom: "2rem" }}><MediaItem item={c.media[4]} large /></div></FadeIn>}
 
+        {/* Mídias restantes (índice 5 em diante, inclui vídeo) */}
+        {c.media.length > 5 && (
+          <FadeIn delay={0.1}>
+            <div style={{ marginBottom: "2rem" }}>
+              <p style={{ ...labelStyle, marginBottom: 16 }}>Mídias do projeto</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+                {c.media.slice(5).map((item, i) => (
+                  <div key={i}>
+                    <MediaItem item={item} large />
+                    {item.caption && (
+                      <p style={{ fontSize: 11, color: "rgba(255,255,255,.3)", marginTop: 8, textAlign: "center", letterSpacing: "0.04em" }}>{item.caption}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        )}
+
         {/* Conclusão */}
         <FadeIn delay={0.1}>
           <div style={{ ...glassCard({ background: "rgba(140,3,67,.06)", borderColor: "rgba(140,3,67,.2)" }), marginBottom: "1.5rem" }}>
