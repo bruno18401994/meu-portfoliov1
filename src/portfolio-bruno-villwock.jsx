@@ -467,7 +467,7 @@ const CASES = [
       { type: "image", src: "/sommelier/fluxo-usuario.jpg",       alt: "Fluxo de usuário com as 4 perguntas guiadas até a recomendação",    caption: "Fluxo de usuário: 4 perguntas guiadas da ocasião até a recomendação final." },
       { type: "image", src: "/sommelier/rascunhos-prototipo.png", alt: "Rascunhos e exploração de telas no Figma",                         caption: "Exploração e rascunhos no Figma — diferentes direções antes do protótipo final." },
       { type: "image", src: "/sommelier/totem-mercado-02.jpg",    alt: "Totem do Sommelier Digital visto pelo ângulo lateral na gôndola",   caption: "Totem em operação — integrado ao ambiente da adega no ponto de venda." },
-      { type: "video", src: "/sommelier/prototipo.mp4",           alt: "Demonstração do protótipo interativo do Sommelier Digital",         caption: "Demonstração da jornada completa no protótipo interativo." },
+      { type: "youtube", src: "nfYm4eGQr5Q",              alt: "Demonstração do protótipo interativo do Sommelier Digital",         caption: "Demonstração da jornada completa no protótipo interativo." },
     ],
   },
 
@@ -787,6 +787,21 @@ function MediaItem({ item, large = false }) {
       <div style={placeholderStyle}>
         <span style={{ fontSize: 24, opacity: 0.25 }}>🖼</span>
         <p style={{ fontSize: 12, color: "rgba(255,255,255,0.22)", margin: 0 }}>{item.alt}</p>
+      </div>
+    );
+  }
+
+  if (item.type === "youtube") {
+    const videoId = item.src;
+    return (
+      <div style={{ position: "relative", width: "100%", paddingBottom: "177.78%", borderRadius: large ? 16 : 12, overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)", background: "#000" }}>
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}`}
+          title={item.alt}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+        />
       </div>
     );
   }
