@@ -794,13 +794,21 @@ function MediaItem({ item, large = false }) {
   if (item.type === "youtube") {
     const videoId = item.src;
     return (
-      <div style={{ position: "relative", width: "100%", paddingBottom: "177.78%", borderRadius: large ? 16 : 12, overflow: "hidden", border: "1px solid rgba(255,255,255,0.1)", background: "#000" }}>
+      <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
         <iframe
           src={`https://www.youtube.com/embed/${videoId}`}
           title={item.alt}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
+          style={{
+            width:        "100%",
+            maxWidth:     300,
+            height:       520,
+            border:       "1px solid rgba(255,255,255,0.1)",
+            borderRadius: large ? 16 : 12,
+            background:   "#000",
+            display:      "block",
+          }}
         />
       </div>
     );
